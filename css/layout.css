@@ -1,0 +1,166 @@
+
+header{
+    position: relative;
+    width: auto;
+}
+
+
+nav{
+    margin-bottom: 10px;
+    border-radius:5px;
+}
+
+
+
+aside .card{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.card-header{
+    cursor: pointer;
+}
+.alert{
+    text-align: center;
+    font-size: 30px;
+}
+
+.pagination{
+    margin-left: 50%;
+}
+.box2 {
+	width: 50%;
+    height: auto;
+   
+	margin-top: 0px;
+	margin-left: 25%;
+	margin-right: 0px;
+	text-align: center;
+	font-size: 25px;	
+	color: black;
+}
+footer.card{
+    background-color: white;
+   text-align: center;
+    margin-top: 20px;
+}
+.poly-prod{
+    
+    padding: 5px;
+    
+    
+}
+.poly-prod .panel-heading img{
+    height: 150px;
+    max-width: 100%;
+    border-radius:5px;
+    
+}
+.panel-heading img:hover{
+    transform: scale(1.1);
+}
+.panel-body{
+    background-color: red;
+    height: 50px;
+    background-color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+.card-body1 input[type="text"]{
+    display: block;
+    box-sizing: border-box;
+   margin-bottom: 0px;
+    padding: 4px;
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+
+.card-body1 input[type="password"]{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    padding: 4px;
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+.card-body1 input[type="email"]{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    padding: 4px;
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+
+.wrap input{
+    padding:10px;
+    
+    border-radius:1px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    
+    
+        outline: none;
+    }
+    .wrap input[type=text],input[type=email],input[type=number],input[type=password]
+    {
+    width:90%;
+    }
+    .wrap input[type=button]{
+    width:95%;
+    background:orange;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    
+    }
+    .wrap input[type=button]:hover{
+    background:green;
+    }
+    select{
+        padding:10px;
+        width:32%;
+        border-radius:5px;
+        
+        }
+ .was-validated .form-group{
+            width: auto;
+            height: 100px;
+            background:white;
+            padding:5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border-radius:10px;
+        }
+        .was-validated .form-group input[type=text]{
+            border: none;
+            outline: none;
+        }
+        .pagination{
+            margin-top: 50px;
+            margin-left: 50%;
+        }

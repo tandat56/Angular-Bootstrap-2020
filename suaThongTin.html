@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Đăng kí</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css\fontawesome-all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="font\flaticon.css">
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">    
+    <section class="fxt-template-animation fxt-template-layout18 has-animation" data-bg-image="images/2.gif">      
+        <div class="fxt-content">
+            <div class="fxt-header">
+                <h1><a href="dangKi.html" class="text-warning">Lê Tấn Đạt - PS09246  </a></h1>
+            </div>                            
+            <div class="fxt-form"> 
+                <p>Đổi thông tin của bạn</p>
+                <form method="POST">
+                    <div class="form-group"> 
+                        <div class="fxt-transformY-50 fxt-transition-delay-1">                                              
+                            <input ng-model="student.taiKhoan" type="text" id="name" class="form-control" name="name" placeholder="Tài khoản" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <div class="fxt-transformY-50 fxt-transition-delay-1">                                              
+                            <input ng-model="student.matKhau" type="password" id="text" class="form-control" name="email" placeholder="******" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">  
+                        <div class="fxt-transformY-50 fxt-transition-delay-2">                                              
+                            <input ng-model="student.hoTen" id="password" type="text" class="form-control" name="fullName" placeholder="Họ tên" required="required">
+                            <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-3">
+                            <div class="fxt-checkbox-area">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-4">  
+                            <button type="button" class="fxt-btn-fill" ng-click="update()">Đổi thông tin</button>
+                        </div>
+                    </div>
+                </form>                
+            </div> 
+            <div class="fxt-footer">
+                <div class="fxt-transformY-50 fxt-transition-delay-9">  
+                    <p>Bạn đã có tài khoản? <a href="dangNhap.html" class="switcher-text2"> Đăng nhập</a></p>
+                </div> 
+            </div> 
+            <div class="fxt-style-line"> 
+                <div class="fxt-transformY-50 fxt-transition-delay-5">                                
+                    <h3>Tài khoản đang có</h3> 
+                </div>
+            </div>
+
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th>Tài khoản</th>
+                    <th>Mật khẩu</th>
+                    <th>Họ tên</th>
+                </tr>
+                <tbody ng-repeat="st in students">
+                    <td>{{st.taiKhoan}}</td>
+                    <td>{{st.matKhau}}</td>
+                    <td>{{st.hoTen}}</td>
+                    <td><a href="#" ng-click="edit($index)">Sửa</a></td>
+                </tbody>
+            </table>
+
+        </div>
+        <script>
+            var app = angular.module("myapp", []);
+            app.controller("myctrl", function($scope) {
+                $scope.students = [{
+                    taiKhoan: "dat",
+                    matKhau: "123",
+                    hoTen: "Lê Tấn Đạt",
+                }, {
+                    taiKhoan: "vyvy",
+                    matKhau: "123",
+                    hoTen: "VyVy",
+                }];
+                $scope.student = {};
+                $scope.index = -1;
+                $scope.clear = function() {
+                    $scope.student = {}
+                    $scope.index = -1;
+                }
+                $scope.insert = function() {
+                    $scope.students.push(angular.copy($scope.student));
+                    $scope.clear();
+                }
+                $scope.update = function() {
+                    $scope.students[$scope.index] = angular.copy($scope.student);
+                }
+                $scope.delete = function() {
+                    $scope.students.splice($scope.index, 1);
+                    $scope.clear();
+                }
+                $scope.cancel = function() {
+                    if ($scope.index == -1) {
+                        $scope.clear();
+                    } else {
+                        $scope.edit($scope.index);
+                    }
+                }
+                $scope.edit = function(index) {
+                    $scope.index = index;
+                    $scope.student = angular.copy($scope.students[index])
+                }
+            });
+        </script>
+    </section>    
+    <!-- jquery-->
+    <script src="js\jquery-3.3.1.min.js"></script>
+    <!-- Popper js -->
+    <script src="js\popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js\bootstrap.min.js"></script>
+    <!-- Imagesloaded js -->
+    <script src="js\imagesloaded.pkgd.min.js"></script>
+    <!-- Validator js -->
+    <script src="js\validator.min.js"></script>
+    <!-- Custom Js -->
+    <script src="js\main.js"></script>
+
+</body>
+
+</html>

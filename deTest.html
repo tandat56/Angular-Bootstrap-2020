@@ -1,0 +1,49 @@
+<article class="col-sm-9 ">
+    <div class=" box2">
+        <br>
+        <h1>
+          <b>THI TRẮC NGHIỆM  </b>
+        </h1>
+      </div>
+      <br>
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-10">
+        <span class="font-weight-bold" >{{tenMonHoc}}</span>           
+      </div>
+      <div class="col-md-2" >
+         
+          <h2> <span class="badge badge-danger">{{time}}</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+      <div ng-repeat="quiz in quizs | limitTo:1:begin">
+          <div class="alert alert-danger">{{index}}. {{quiz.Text}}</div>
+          <div class="pl-3" ng-repeat="ans in quiz.Answers">
+              <div class="form-check">
+                  <input type="radio" class="form-check-input" name="answer{{quiz.Id}}" value="ans.Id"
+                    ng-click="tinh_diem(quiz.Marks,quiz.AnswerId,ans.Id)">
+                    <label class="form-check-lable"> {{ans.Text}}</label>
+              </div>
+          </div>
+      </div>
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="" ng-click="prev()"><i class="fas fa-hand-point-left"></i></a></li>
+              <li class="page-item"><a class="page-link" href="" ng-click="next()"><i class="fas fa-hand-point-right"></i></a></li>
+          </ul>
+          <div style="float: right;">
+            <a href="javascript:history.go(0)"><button class=" btn btn-info" style="margin-top:-95px;">Làm
+                    lại</button></a>
+            <button class=" btn btn-info" style="margin-top:-95px;" ng-click="kq()">Kết
+                thúc</button>
+        </div>
+      </nav>
+  </div>
+  <div class="card-footer font-weight-bold">TỔNG ĐIỂM {{tong_diem}}/{{quizs.length}}</div>
+  <br> 
+</div>
+</article>
+<aside class="col-md-3" ng-include="'ds_mon_hoc.html'"></aside>

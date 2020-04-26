@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeTanDat - PS09246</title>
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <!-- Poly -->
+  <link href="css/layout.css" rel="stylesheet" />
+  
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/angular-cookies.js"></script>
+
+  <script src="js/index.js"></script>
+  <script src="js/homeCtrl.js"></script>
+  <script src="js/deTest.js"></script>
+
+  <script src="js/logOUT.js"></script>
+</head>
+<style>
+  input.ng-invalid {
+    background-image: url('images/loi.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+</style>
+
+<body ng-controller="myController" style="background-image: url(/images/body.jpg);">
+    <div class="container" >
+      <header class="row" ng-include="'header.html'"></header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark" ng-include="'nav.html'" ></nav>
+      <section >
+        <div class="row" ng-view></div>
+      </section>
+      <footer class="row-md-2" ng-include="'footer.html'"></footer>
+    </div>
+  </body>
+
+</html>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">

@@ -1,0 +1,13 @@
+
+
+
+    <div class="card-header" data-toggle="collapse" href="#collapseExample" role="button"
+    aria-expanded="false" aria-controls="collapseExample">
+    <i class="fas fa-briefcase"></i> DANH MỤC MÔN HỌC     
+    </div>
+    <div class="collapse" id="collapseExample">
+      <div class="list-group">
+        <li class="list-group-item" ng-repeat="x in subjects">
+          <a href="#!test/{{x.Id}}/{{x.Name}}">{{x.Name}} </a></li>          
+      </div>
+    </div>

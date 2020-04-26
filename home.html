@@ -1,0 +1,32 @@
+<article class="col-sm-9">
+    <div class=" box2">
+      <br>
+      <h1>
+        <b>CÁC MÔN HỌC </b>
+      </h1>
+    </div>
+ <div class="row">
+  <div class="col-md-6 poly-prod"  ng-repeat="x in subjects | limitTo:4:begin">
+      <div class="card text-center">
+          <div class="card-header">{{x.Name}}</div>
+          <div class="card-body">
+              <img  src="images/logos/{{x.Logo}}" />
+             
+           </div>
+          <div class="card-footer"></div>
+        </div>
+</div>
+
+ </div>
+
+ <nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="" ng-click="first()"><i class="fas fa-angle-double-left"></i></a></li>
+        <li class="page-item"><a class="page-link" href="" ng-click="prev()"><i class="fas fa-angle-left"></i></a></li>
+        <li class="page-item"><a class="page-link" href="" ng-click="next()"><i class="fas fa-angle-right"></i></a></li>
+        <li class="page-item"><a class="page-link" href="" ng-click="last()"><i class="fas fa-angle-double-right"></i></a></li>    
+    </ul>
+  </nav>
+  </article>
+<aside class="col-sm-3" ng-include="'ds_mon_hoc.html'"></aside>
+ 
